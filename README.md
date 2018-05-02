@@ -1,2 +1,0 @@
-# ResearchReduxOnComp
-Created with CodeSandbox
