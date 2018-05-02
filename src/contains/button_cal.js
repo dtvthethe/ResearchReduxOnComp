@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { plush, sub } from "../actions";
 
@@ -8,14 +9,14 @@ class ButtonCal extends Component {
       <div>
         <button
           onClick={() => {
-            this.props.tang;
+            this.props.tang();
           }}
         >
           Increment
         </button>
         <button
           onClick={() => {
-            this.props.giam;
+            this.props.giam();
           }}
         >
           Decrement
@@ -31,8 +32,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    tang: dispatch(plush(1)),
-    giam: dispatch(sub(1)),
+    tang: () => dispatch(plush()),
+    giam: () => dispatch(sub()),
   };
 }
 

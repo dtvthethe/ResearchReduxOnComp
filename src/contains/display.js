@@ -2,10 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 class Display extends Component {
-  componentDidMount() {
-    console.log("Did mount: " + this.props.num);
-  }
-
   render() {
     return (
       <div>
@@ -17,7 +13,7 @@ class Display extends Component {
 
 function mapStateToProps(state) {
   return {
-    num: state.data,
+    num: state.redu.data,
   };
 }
 
