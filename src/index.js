@@ -1,17 +1,13 @@
 import React from "react";
 import { render } from "react-dom";
-import Hello from "./Hello";
-
-const styles = {
-  fontFamily: "sans-serif",
-  textAlign: "center",
-};
+import { Provider } from "react-redux";
+import { myStore } from "./stores";
+import Cal from "./components/cal";
 
 const App = () => (
-  <div style={styles}>
-    <Hello name="CodeSandbox" />
-    <h2>Hi {"\u2728"}</h2>
-  </div>
+  <Provider store={myStore}>
+    <Cal />
+  </Provider>
 );
 
 render(<App />, document.getElementById("root"));
